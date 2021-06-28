@@ -1,0 +1,32 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /weather-persistence
+
+cloud:
+  aws:
+    region:
+      static: us-east-1
+      auto: false
+    credentials:
+      access-key: AKIAT4P5RIM46BVADUVH
+      secret-key: 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
+    stack:
+      auto: false
+
+aws:
+  sqs:
+    weather-queue: https://sqs.us-east-2.amazonaws.com/267356554041/weather-persistence-command
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-standalone:3306/test
+    username: sa
+    password: <REPLACE_FIELD>
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml

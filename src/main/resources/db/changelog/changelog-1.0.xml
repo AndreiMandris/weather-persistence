@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="Andrei (generated)" id="1234524513">
+        <createTable tableName="WEATHER">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="temperature" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="pressure" type="NUMBER"/>
+            <column name="humidity" type="NUMBER"/>
+            <column name="base" type="VARCHAR(255)"/>
+            <column name="visibility" type="NUMBER"/>
+            <column name="WIND_SPEED" type="NUMBER"/>
+            <column name="WIND_DEG" type="NUMBER"/>
+            <column name="CLOUDS_ALL" type="NUMBER"/>
+            <column name="DATE_OF_COMPUTING" type="TIMESTAMP"/>
+            <column name="QUERIED_AT" type="TIMESTAMP"/>
+            <column name="country" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
