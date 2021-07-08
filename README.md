@@ -8,8 +8,6 @@ Create mysql container:
 
 Override properties:
 
-`spring.datasource.password: password` 
-
 `docker build . -t weather-persistence`
 
 `docker run -p 8091:8091 --name weather-persistence --link mysql-standalone:mysql -d weather-persistence`

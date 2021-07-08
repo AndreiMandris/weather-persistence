@@ -9,8 +9,8 @@ cloud:
       static: us-east-1
       auto: false
     credentials:
-      access-key: AKIAT4P5RIM46BVADUVH
-      secret-key: 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
+      access-key: ENC(AQ90BEl4kjQqnEnwgBcnq+R4lHvrsF9bpHLtpqYfr11pT7PjalOGbpfu5fzazjBUHOPABz6ZlQF9jq1lU1QHQA==)
+      secret-key: ENC(nNMtnKLivIWm2gaxo2/9u4uhrsfpi/Q3OvNNO8aKAgnBLCM8TVe5/6a4jY5clna/4zAR2Li9KymhdAAs0qmK2H6jd3cgrcYF8q0DHt3OxyI=)
     stack:
       auto: false
 
@@ -23,10 +23,14 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://mysql-standalone:3306/test
     username: sa
-    password: <REPLACE_FIELD>
+    password: ENC(Cfv16D9mgvHALgLBmK7n+tzGdBl+0z2R6n6hGTpOyTfXKtuDy+nB1sHdoDlDFapU)
   jpa:
     hibernate:
       ddl-auto: none
 
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
+
+jasypt:
+  encryptor:
+    password: <INSERT_PASSWORD>
